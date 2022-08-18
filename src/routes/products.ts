@@ -4,7 +4,9 @@ import { Router } from "express";
 const router = Router();
 
 router.get("/", async (req, res) => {
-  const products = await Product.find();
+  const products = await Product.find({
+    relations: { category: true  }
+  });
   res.json({ data: products });
 });
 

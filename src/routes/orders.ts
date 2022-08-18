@@ -12,7 +12,7 @@ router.get("/", async (req, res) => {
   res.json({ data: orders });
 });
 
-router.post("/create", async (req, res) => {
+router.post("/", async (req, res) => {
   try {
     const { firstName, lastName, mobileNum, city, address, orderNumber, orderlines, } = req.body;
 
